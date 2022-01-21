@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="image/favicon" href="./images/favicon.png"/>
+        <title>Moe's Dice Game</title>
+    </head>
+
+    <body>
+
+        <div class="wrapper clearfix">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-bank"><i class="ion-ios-download-outline"></i>BANK</button>
+
+            
+            <input type="text" id="winningScore" placeholder="Enter final score">
+            
+            <img src=".png" alt="Dice image" class="dice" id="dice1">
+            <img src=".png" alt="Dice image" class="dice" id="dice2">
+        </div>
+
+        <div class="popup">
+            <button id="close">&times;</button>
+            <h2>Instructions</h2>
+            <p>
+                This is a 2 player dice roll game.
+                In each turn, a player can roll the dice multiple times and their result gets added to the current score;
+                BUT, if a player rolls a 1, their whole current score gets lost and it will be the other player's turn.
+                The player can choose to 'Bank', which means that their current score gets added to their total score.
+                 After that, it's the next player's turn;
+                you can agree a final score that you both would like to play to by entering it below and the player to reach it first wins!
+                Good luck.
+            </p>
+        </div>
+        
+        <script src="app.js"></script>
+
+    </body>
+</html>
